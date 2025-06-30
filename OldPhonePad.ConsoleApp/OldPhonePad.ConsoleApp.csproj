@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OldPhonePad.Core\OldPhonePad.Core.csproj" />
+    <ProjectReference Include="..\OldPhonePad.Models\OldPhonePad.Models.csproj" />
+  </ItemGroup>
+
+</Project>
