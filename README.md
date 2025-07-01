@@ -20,6 +20,27 @@ A coding challenge solution that simulates old mobile phone keypad input to gene
   - Unit tested using **xUnit** and **Shouldly**
 
 ---
+Project Structure
+OldPhonePad.sln
+│
+├── OldPhonePad.ConsoleApp # Console UI entry point
+│ └── Program.cs
+│
+├── OldPhonePad.Core # Main logic & interfaces
+│ └── Services
+│ └── OldPhonePadService.cs
+│ └── Interfaces
+│ └── IOldPhonePadService.cs
+│
+├── OldPhonePad.DependencyInjection # Service registration extension
+│ └── DependencyRegistrar.cs
+│
+├── OldPhonePad.Models # Any future DTOs or config objects
+│
+├── OldPhonePad.Tests # xUnit + Shouldly test project
+│ └── OldPhonePadServiceTests.cs
+│
+└── README.md
 
 ## 🚀 Getting Started
 
