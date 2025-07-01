@@ -1,20 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\OldPhonePad.Core\OldPhonePad.Core.csproj" />
-    <ProjectReference Include="..\OldPhonePad.DependencyInjection\OldPhonePad.DependencyInjection.csproj" />
-    <ProjectReference Include="..\OldPhonePad.Models\OldPhonePad.Models.csproj" />
   </ItemGroup>
 
 </Project>
