@@ -1,4 +1,6 @@
-﻿namespace OldPhonePad.Core;
+﻿using OldPhonePad.Core.Extensions;
+
+namespace OldPhonePad.Core;
 
 public class OldPhonePadService : IOldPhonePadService
 {
@@ -14,9 +16,11 @@ public class OldPhonePadService : IOldPhonePadService
     public string ParseInput(string input)
     {
         if (string.IsNullOrWhiteSpace(input)) return "";
+        input = input.FilterValidPhonePadChars();
 
         var final = new StringBuilder();
         var temp = new StringBuilder();
+        bool hashEncountered = false;
 
         for (int i = 0; i < input.Length; i++)
         {
@@ -25,6 +29,7 @@ public class OldPhonePadService : IOldPhonePadService
             if (c == '#')
             {
                 Process(final, temp);
+                hashEncountered = true;
                 break;
             }
             else if (c == '*')
@@ -46,6 +51,11 @@ public class OldPhonePadService : IOldPhonePadService
                     temp.Append(c);
                 }
             }
+        }
+
+        if (!hashEncountered)
+        {
+            Process(final, temp);
         }
 
         return final.ToString();
